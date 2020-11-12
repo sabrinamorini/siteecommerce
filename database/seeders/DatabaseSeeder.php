@@ -13,13 +13,9 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        \App\Models\User::create(
-            [
-                'nom' => 'T-Shirt Gonnie',
-                'prix' => 25,
-                'description' => 'T-Shirt du film Gonnie',
-                'photo_principale' => 'gooni.jpg',
-            ]
-        );
+        // User::factory(10)->create();
+        $this->call([
+            PostTableSeeder::class,
+        ]);
     }
 }
